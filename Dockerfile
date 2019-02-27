@@ -21,7 +21,7 @@ COPY package*.json ./
 
 RUN npm -v
 RUN npm set registry https://registry.npmjs.org/
-RUN npm install
+RUN npm i --target_arch=armv6 --target_platform=linux
 # If you are building your code for production
 # RUN npm install --only=production
 
