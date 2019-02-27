@@ -4,12 +4,14 @@ ARG distro=stretch
 FROM resin/rpi-raspbian:$distro
 
 RUN apt-get update
-
 RUN apt-get dist-upgrade
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+RUN apt-get remove nodejs nodejs-legacy nodered
+RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 RUN apt-get install -y nodejs
-RUN apt-get install npm
+
+# Now the versions are:  nodejs: v9.3.0  npm: v5.5.1 --> npm need update
+RUN npm install npm@latest -g
 RUN node -v
 
 ENV SILEX_VERSION 0.1
