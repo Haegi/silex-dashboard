@@ -1,8 +1,6 @@
 #!/bin/bash
 FROM arm32v7/node:11-stretch
 
-RUN apt-get update
-
 RUN npm install npm@latest -g
 RUN node -v
 
