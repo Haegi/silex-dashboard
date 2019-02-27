@@ -5,9 +5,12 @@ FROM resin/rpi-raspbian:$distro
 
 RUN apt-get update
 
-RUN apt-get purge nodejs npm && curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+RUN apt-get dist-upgrade
+
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 RUN apt-get install -y nodejs
 RUN apt-get install npm
+RUN node -v
 
 ENV SILEX_VERSION 0.1
 
