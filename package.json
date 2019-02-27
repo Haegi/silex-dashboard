@@ -15,6 +15,8 @@
   "author": "Benjamin Haegenlaeuer",
   "license": "ISC",
   "dependencies": {
+    "node": "^11.6.0",
+	"@types/node": "^10.12.18",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "chart.js": "^2.7.3",
@@ -28,9 +30,5 @@
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.7.0",
     "spdy": "^4.0.0"
-  },
-  "devDependencies": {
-    "node": "^11.6.0",
-	"@types/node": "^10.12.18"
   }
 }
