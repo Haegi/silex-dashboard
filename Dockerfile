@@ -3,9 +3,6 @@ FROM hypriot/rpi-alpine
 
 RUN apk add --update nodejs nodejs-npm
 
-RUN apt-get update
-RUN apt-get dist-upgrade
-
 RUN npm install npm@latest -g
 RUN node -v
 
