@@ -5,11 +5,13 @@ FROM resin/rpi-raspbian:$distro
 
 RUN apt-get update
 RUN apt-get dist-upgrade
+RUN node -v
+RUN npm -v
 
 RUN apt-get remove nodejs nodejs-legacy
-RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 RUN apt-get install -y nodejs
-
+RUN apt-get install -y build-essential
 # Now the versions are:  nodejs: v9.3.0  npm: v5.5.1 --> npm need update
 RUN npm install npm@latest -g
 RUN node -v
