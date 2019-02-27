@@ -1,7 +1,8 @@
 #!/bin/bash
-FROM arm32v7/node:11-stretch
+FROM hypriot/rpi-alpine
 
-RUN npm install npm@latest -g
+RUN apk add --update nodejs nodejs-npm
+RUN npm -v
 RUN node -v
 
 ENV SILEX_VERSION 0.1
