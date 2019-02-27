@@ -3,7 +3,10 @@
 ARG distro=stretch
 FROM resin/rpi-raspbian:$distro
 
-RUN apt-get update && apt-get install nodejs npm
+RUN apt-get update
+
+RUN apt-get purge nodejs npm && curl -sL https://deb.nodesource.com/setup | sudo bash -
+RUN apt-get install -y nodejs npm
 
 ENV SILEX_VERSION 0.1
 
