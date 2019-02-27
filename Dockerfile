@@ -20,6 +20,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm -v
+RUN npm set registry https://registry.npmjs.org/
 RUN npm install
 # If you are building your code for production
 # RUN npm install --only=production
