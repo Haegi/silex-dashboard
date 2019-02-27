@@ -6,7 +6,7 @@ FROM resin/rpi-raspbian:$distro
 RUN apt-get update
 RUN apt-get dist-upgrade
 
-RUN apt-get remove nodejs nodejs-legacy nodered
+RUN apt-get remove nodejs nodejs-legacy
 RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 RUN apt-get install -y nodejs
 
