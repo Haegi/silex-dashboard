@@ -1,7 +1,7 @@
 #!/bin/bash
 # Pull base image
 ARG distro=stretch
-FROM balenalib/raspberrypi3-debian-node:10.10-$distro-run
+FROM balenalib/raspberrypi3-debian-node:10.10-$distro-build
 
 RUN apt-get update
 RUN apt-get dist-upgrade
