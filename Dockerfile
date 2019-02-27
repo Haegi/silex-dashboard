@@ -1,8 +1,7 @@
 #!/bin/bash
-# Pull base image
-FROM resin/armv7hf-debian
+FROM hypriot/rpi-alpine
 
-RUN [ "cross-build-start" ]
+RUN apk add --update nodejs nodejs-npm
 
 RUN apt-get update
 RUN apt-get dist-upgrade
@@ -20,9 +19,8 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm -v
-RUN npm set registry https://registry.npmjs.org/
-RUN npm i --target_arch=armv6 --target_platform=linux
+
+RUN npm install
 # If you are building your code for production
 # RUN npm install --only=production
 
