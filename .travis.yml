@@ -17,7 +17,7 @@ script:
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
 # build image
-- docker build --build-arg distro=wheezy -t haegi/silex-dashboard .
+- docker build --build-arg distro=stretch -t haegi/silex-dashboard .
 # test image
 
 # push image
