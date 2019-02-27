@@ -1,7 +1,8 @@
 #!/bin/bash
 # Pull base image
-ARG distro=stretch
-FROM balenalib/raspberrypi3-debian-node:10.10-$distro-build
+FROM resin/armv7hf-debian
+
+RUN [ "cross-build-start" ]
 
 RUN apt-get update
 RUN apt-get dist-upgrade
@@ -34,3 +35,5 @@ RUN npm run build
 # expose multiple ports
 EXPOSE 3001 999
 CMD [ "npm", "run", "start-server" ]
+
+RUN [ "cross-build-end" ]
