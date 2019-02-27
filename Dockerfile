@@ -3,7 +3,7 @@
 ARG distro=stretch
 FROM resin/rpi-raspbian:$distro
 
-RUN apk add --update nodejs nodejs-npm
+RUN apt-get update && apt-get install nodejs npm
 
 ENV SILEX_VERSION 0.1
 
