@@ -8,7 +8,7 @@ RUN apt-get install wget
 RUN wget https://nodejs.org/dist/v11.10.1/node-v11.10.1-linux-armv7l.tar.gz
 RUN tar -xvf node-v11.10.1-linux-armv7l.tar.gz
 RUN cd node-v11.10.1-linux-armv7l/ && sudo cp -R * /usr/local/ #attention copies also readme and other not required files
-RUN cd ..
+#RUN cd ..
 RUN sudo npm -v
 RUN sudo node -v
 
@@ -23,7 +23,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 
-RUN npm i
+RUN sudo npm i
 # If you are building your code for production
 # RUN npm install --only=production
 
