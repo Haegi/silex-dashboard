@@ -8,6 +8,7 @@ RUN apt-get install wget
 RUN wget https://nodejs.org/dist/v11.10.1/node-v11.10.1-linux-armv7l.tar.gz
 RUN tar -xvf node-v11.10.1-linux-armv7l.tar.gz
 RUN cd node-v11.10.1-linux-armv7l
+RUN ls
 RUN sudo cp -R * /usr/local/ #attention copies also readme and other not required files
 
 RUN node -v
