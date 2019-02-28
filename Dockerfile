@@ -1,5 +1,5 @@
 #!/bin/bash
-FROM arm32v6/node
+FROM arm32v6/node:alpine
 
 RUN node -v
 RUN npm -v
