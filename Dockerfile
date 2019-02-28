@@ -31,10 +31,8 @@ RUN sudo npm install
 COPY . .
 
 # build next.js
-RUN npm run build
+RUN sudo npm run build
 
 # expose multiple ports
 EXPOSE 3001 999
 CMD [ "npm", "run", "start-server" ]
-
-RUN [ "cross-build-end" ]
