@@ -1,7 +1,7 @@
 #!/bin/bash
-FROM hypriot/rpi-alpine
+FROM arm32v7/node:latest
 
-RUN apk add --update nodejs nodejs-npm
+RUN apt-get uppdate
 RUN npm -v
 RUN node -v
 
@@ -16,7 +16,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 
-RUN npm install
+RUN npm i
 # If you are building your code for production
 # RUN npm install --only=production
 
