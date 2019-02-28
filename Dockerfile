@@ -1,6 +1,11 @@
 #!/bin/bash
 FROM balenalib/rpi-raspbian:stretch
 
+RUN apt-get update
+RUN wget https://nodejs.org/dist/v8.9.0/node-v8.9.0-linux-armv6l.tar.gz && tar -xzf node-v8.9.0-linux-armv6l.tar.gz
+RUN cd node-v6.11.1-linux-armv6l/
+RUN cp -R * /usr/local/
+
 RUN node -v
 RUN npm -v
 
