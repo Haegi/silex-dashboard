@@ -1,5 +1,5 @@
 #!/bin/bash
-FROM arm32v6/node:alpine
+FROM balenalib/rpi-raspbian:stretch
 
 RUN node -v
 RUN npm -v
