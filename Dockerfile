@@ -1,7 +1,6 @@
 #!/bin/bash
 FROM arm32v7/node:latest
 
-RUN apt-get uppdate
 RUN npm -v
 RUN node -v
 
