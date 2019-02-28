@@ -35,7 +35,8 @@ RUN sudo npm install next
 RUN sudo npm install react
 RUN sudo npm install react-chartjs-2
 RUN sudo npm install react-dom
-RUN sudo npm spdy
+RUN sudo npm install spdy
+RUN sudo npm install @types/node
 # If you are building your code for production
 # RUN npm install --only=production
 
