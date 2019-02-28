@@ -1,8 +1,8 @@
 #!/bin/bash
-FROM arm32v7/node:latest
+FROM arm32v6/node
 
-RUN npm -v
 RUN node -v
+RUN npm -v
 
 ENV SILEX_VERSION 0.1
 
