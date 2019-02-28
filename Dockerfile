@@ -23,7 +23,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN sudo npm config set registry https://registry.npmjs.org/
-RUN sudo npm install @types/react
+"""RUN sudo npm install @types/react
 RUN sudo npm install @types/react-dom
 RUN sudo npm install chart.js
 RUN sudo npm install express
@@ -36,7 +36,8 @@ RUN sudo npm install react
 RUN sudo npm install react-chartjs-2
 RUN sudo npm install react-dom
 RUN sudo npm install spdy
-RUN sudo npm install @types/node
+RUN sudo npm install @types/node"""
+RUN sudo npm i
 # If you are building your code for production
 # RUN npm install --only=production
 

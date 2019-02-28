@@ -24,7 +24,7 @@ script:
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
-    TAG=$(grep "ENV SILEX_VERSION" Dockerfile | awk 'NF>1{print $NF}')
+    TAG=0.1
     docker tag haegi/silex-dashboard haegi/silex-dashboard:arm-$TAG
     docker push haegi/silex-dashboard:arm-$TAG
     docker manifest create haegi/silex-dashboard:$TAG haegi/silex-dashboard:arm-$TAG
