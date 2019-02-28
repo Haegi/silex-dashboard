@@ -4,11 +4,10 @@ FROM balenalib/rpi-raspbian:stretch
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get dist-upgrade -y
-RUN apt-get install wget
-RUN wget https://nodejs.org/dist/v8.9.0/node-v8.9.0-linux-armv6l.tar.gz && tar -xzf node-v8.9.0-linux-armv6l.tar.gz
-RUN ls
-RUN cd node-v8.9.0-linux-armv6l/
-RUN sudo cp -R * /usr/local/
+RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -  # Install NodeJS v10
+RUN apt-get install -y nodejs  # npm nodejs-legacy #(Installed with nodesource)
+RUN apt-get install -y build-essential
+RUN npm install npm@latest -g
 
 RUN node -v
 RUN npm -v
