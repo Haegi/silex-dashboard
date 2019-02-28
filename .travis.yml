@@ -17,7 +17,7 @@ script:
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
 # build image
-- travis_wait docker build -t haegi/silex-dashboard .
+- travis_wait 35 docker build -t haegi/silex-dashboard .
 # test image
 
 # push image
