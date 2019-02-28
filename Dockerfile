@@ -8,7 +8,7 @@ RUN apt-get install wget
 RUN wget https://nodejs.org/dist/v8.9.0/node-v8.9.0-linux-armv6l.tar.gz && tar -xzf node-v8.9.0-linux-armv6l.tar.gz
 RUN ls
 RUN cd node-v8.9.0-linux-armv6l/
-RUN cp -R * /usr/local/
+RUN sudo cp -R * /usr/local/
 
 RUN node -v
 RUN npm -v
