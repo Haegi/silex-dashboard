@@ -22,7 +22,9 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN sudo npm config set registry https://registry.npmjs.org/ && sudo npm install
+RUN sudo npm config set registry https://registry.npmjs.org/
+RUN sudo nom install express
+RUN sudo npm i
 # If you are building your code for production
 # RUN npm install --only=production
 
