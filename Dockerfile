@@ -12,7 +12,6 @@ RUN cd ..
 RUN sudo npm -v
 RUN sudo node -v
 
-ENV SILEX_VERSION 0.1
 
 # Create app directory
 WORKDIR /usr/src/app

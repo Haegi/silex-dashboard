@@ -47,18 +47,11 @@ app.prepare().then(() => {
   
     server.listen("3001", err => {
       if (err) throw err
-      console.log(`> Ready on http://localhost:3001`)
+      console.log(`> Dashboard ready on http://localhost:3001`)
     })
   })
 
-
-const options = {
-key: fs.readFileSync("./localhost-privkey.pem"),
-// tslint:disable-next-line:object-literal-sort-keys
-cert: fs.readFileSync("./localhost-cert.pem"),
-};
-
-const HTTP2Server = http2.createSecureServer(options);
+const HTTP2Server = http2.createServer();
 HTTP2Server.on("stream", (stream, requestHeaders) => {
   console.log(requestHeaders);
   let deviceID = requestHeaders[":path"];
