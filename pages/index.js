@@ -80,10 +80,10 @@ class IndexPage extends Component {
     async fetchData() {
 
         let [IoTRespoonse, WeatherResponse, ForecastResponse, CalendarResponse] = await Promise.all([
-          fetch('/queue'),
+          fetch('silex-dashboard:3001/queue'),
           fetch('http://api.openweathermap.org/data/2.5/weather?zip=69207,de&units=metric&appid=4e632b73bd506b85d6e8d3c892507a94'),
           fetch('http://api.openweathermap.org/data/2.5/forecast?zip=69207,de&units=metric&appid=4e632b73bd506b85d6e8d3c892507a94'),
-          fetch('/calendar')
+          fetch('silex-dashboard:3001/calendar')
         ]);
 
         const data = await IoTRespoonse.json();
